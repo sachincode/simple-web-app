@@ -1,7 +1,7 @@
-<div class="col-xs-12" ms-controller="form">
+<div class="col-xs-12">
     <div class="form-group">
-        <input type="text" ms-duplex="name">
-        <button class="btn btn-info" ms-click="sayhi()">
+        <input type="text" id="inputText">
+        <button class="btn btn-info btn-sm" id="sayHiBtn">
             say hi
         </button>
     </div>
@@ -10,17 +10,17 @@
 #include('inc/script.vm')
 
 <script>
-    var form = avalon.define('form', function(vm) {
-        vm.name='$!{name}'
-
-        vm.sayhi = function() {
-            $.ajax("/sayhi.do", {
-                type: "post",
-                data: { name: vm.name },
-                success: function(ret) {
-                    message(ret)
-                }
-            })
-        }
-    })
+    $("#sayHiBtn").click(function () {
+        var name = $("#inputText").val();
+        $.ajax("/sayhi.do", {
+            type: "post",
+            data: {name: name},
+            success: function (data) {
+                message(data);
+            },
+            error: function (data) {
+                error(data);
+            }
+        })
+    });
 </script>
