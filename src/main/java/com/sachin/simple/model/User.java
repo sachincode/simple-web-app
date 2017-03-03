@@ -11,9 +11,9 @@ import java.util.Date;
 public class User {
     /** 主键id **/
     private long id;
-    /** qtalkid **/
+    /** 用户名 **/
     private String username;
-    /** 去哪儿唯一姓名 **/
+    /** 昵称 **/
     private String nickname;
     /** 是否超级管理员 **/
     private int admin;
