@@ -41,4 +41,8 @@
         <property name="defaultErrorView" value="error/500"/>
         <property name="exceptionAttribute" value="ex"/>
     </bean>
+
+    <mvc:interceptors>
+        <bean class="com.sachin.simple.service.interceptor.MenuInterceptor"/>
+    </mvc:interceptors>
 </beans>

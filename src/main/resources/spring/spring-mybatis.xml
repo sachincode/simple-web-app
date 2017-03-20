@@ -16,9 +16,9 @@
         </property>
     </bean>
 
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg ref="sqlSessionFactory" />
-    </bean>
+    <!--<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">-->
+        <!--<constructor-arg ref="sqlSessionFactory" />-->
+    <!--</bean>-->
 
     <bean name="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.sachin.simple.dao"/>
